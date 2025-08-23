@@ -443,9 +443,9 @@ class Product extends \Opencart\System\Engine\Model {
 					$sql .= " " . implode(" AND ", $implode) . "";
 				}
 
-				//if (!empty($data['filter_description'])) {
+				if (!empty($data['filter_description'])) {
 					$sql .= " OR `pd`.`description` LIKE '" . $this->db->escape('%' . (string)$data['filter_search'] . '%') . "'";
-				//}
+				}
 			}
 
 			if (!empty($data['filter_search']) && !empty($data['filter_tag'])) {
